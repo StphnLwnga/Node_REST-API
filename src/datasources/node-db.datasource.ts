@@ -10,7 +10,8 @@ const config = {
   user: '',
   password: '',
   database: 'node_db',
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 };
 
 // Observe application's life cycle to disconnect the datasource when

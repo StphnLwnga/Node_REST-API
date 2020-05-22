@@ -3,6 +3,13 @@ import {Entity, model, property} from '@loopback/repository';
 @model({settings: {strict: false}})
 export class Contact extends Entity {
   @property({
+    type: 'object',
+    id: true,
+    generated: true,
+  })
+  id?: number;
+
+  @property({
     type: 'string',
     required: true,
   })
@@ -16,9 +23,9 @@ export class Contact extends Entity {
 
   @property({
     type: 'string',
-    required: true,
+    unique: true,
   })
-  email: string;
+  email?: string;
 
   @property({
     type: 'number',
