@@ -24,8 +24,9 @@ export class Contact extends Entity {
   @property({
     type: 'string',
     unique: true,
+    required: true,
   })
-  email?: string;
+  email: string;
 
   @property({
     type: 'number',
@@ -41,7 +42,7 @@ export class Contact extends Entity {
 
   @property({
     type: 'date',
-    required: true,
+    default: Date.now,
   })
   createdAt: string;
 
